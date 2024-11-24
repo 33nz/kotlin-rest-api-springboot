@@ -1,5 +1,7 @@
 package com.kotlinplayground.functions
 
+import java.time.LocalDate
+
 fun printName(name: String) {
     println("Name is $name")
 }
@@ -9,6 +11,12 @@ fun addition(x: Int, y: Int): Int {
 }
 
 fun jApproach1(x: Int, y: Int) = x + y
+
+fun printPersonDetails(name: String, email: String = "undefined", dob: LocalDate = LocalDate.now()) {
+
+    println("Name is $name, email is $email, and DOB is $dob.")
+
+}
 
 
 fun main() {
@@ -20,5 +28,9 @@ fun main() {
 
     val result1 = jApproach1(1, 2)
     println("Result1 is $result")
+
+    printPersonDetails("Jacob", "jacobwinagte33@gmail.com", LocalDate.parse("1903-08-13"))
+
+    printPersonDetails("Jacob")
 }
 
