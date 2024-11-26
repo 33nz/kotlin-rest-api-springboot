@@ -18,6 +18,10 @@ fun printPersonDetails(name: String, email: String = "undefined", dob: LocalDate
 
 }
 
+fun subtraction(x: Int, y: Int): Int {
+    return x - y
+}
+
 
 fun main() {
 
@@ -32,5 +36,8 @@ fun main() {
     printPersonDetails("Jacob", "jacobwinagte33@gmail.com", LocalDate.parse("1903-08-13"))
 
     printPersonDetails("Jacob")
+
+    val subtractionResult = subtraction(33, 11)
+    println(subtractionResult)
 }
 
