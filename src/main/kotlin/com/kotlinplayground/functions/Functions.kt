@@ -22,6 +22,10 @@ fun subtraction(x: Int, y: Int): Int {
     return x - y
 }
 
+fun division(x: Int, y: Int): Int {
+    return x / y
+}
+
 
 fun main() {
 
@@ -39,5 +43,8 @@ fun main() {
 
     val subtractionResult = subtraction(33, 11)
     println(subtractionResult)
+
+    val divisionResult = division(33, 11)
+    println(divisionResult)
 }
 
