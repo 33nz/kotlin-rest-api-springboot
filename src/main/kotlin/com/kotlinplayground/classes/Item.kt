@@ -18,4 +18,6 @@ fun main() {
 
     item.name = "Iphone 12"
     println("Item is ${item.name}")
+
+    println(item)
 }
