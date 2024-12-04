@@ -9,4 +9,6 @@ object Authenticate {
 
 fun main() {
     Authenticate.authenticate("Jake", "guessmypassword134")
+
+    Authenticate.authenticate("Verena", "thisismypassword")
 }
