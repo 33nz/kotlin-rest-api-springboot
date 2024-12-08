@@ -21,6 +21,28 @@ class SqlCourseRepository: CourseRepository {
 
 }
 
+interface A {
+
+    fun doSomething() {
+        println("doSomething in A")
+    }
+}
+
+interface B {
+
+    fun doSomething() {
+        println("doSomething in B")
+    }
+}
+
+class AB: A, B {
+    override fun doSomething() {
+        super<A>.doSomething()
+        super<B>.doSomething()
+        println("Do something AB")
+    }
+}
+
 fun main() {
 
     val sqlCourseRepository = SqlCourseRepository()
@@ -30,5 +52,8 @@ fun main() {
     val courseId = sqlCourseRepository.save(Course(5,
         "Reactive Programming in Modern Java", "Jacob Wingate"))
     println("Saved course id: $courseId")
+
+    val ab = AB()
+    ab.doSomething()
 
 }
